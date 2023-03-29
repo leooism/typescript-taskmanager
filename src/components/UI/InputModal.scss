@@ -1,0 +1,72 @@
+.backdrop {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100vh;
+	z-index: 10;
+	background: rgba(0, 0, 0, 0.75);
+}
+
+.modal {
+	position: fixed;
+	top: 30vh;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 40%;
+	z-index: 100;
+	overflow: hidden;
+	animation: popup 0.2s ease-in-out;
+	background-color: #ffff;
+	padding: 10px;
+}
+
+@keyframes popup {
+	0% {
+		scale: 0.1;
+		transform: translate(-150%, 1100%);
+	}
+	50% {
+		scale: 0.5;
+	}
+	100% {
+		scale: 1;
+		transform: translateY(-50%, -50%);
+	}
+}
+.addTask {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-template-rows: (repeat(4, 1fr));
+	grid-template-areas:
+		"h h h"
+		"i i ."
+		"i-1 i-2 i-3"
+		"f . .";
+	gap: 1rem;
+}
+.task-header {
+	grid-area: h;
+	border-bottom: 1px solid rgba(128, 128, 128, 0.474);
+}
+.input-1 {
+	grid-area: i;
+}
+.input-1 > input {
+	border: 3 px solid rgba(89, 85, 85, 0.588);
+	outline: none;
+	padding: 10px;
+	width: 100%;
+}
+.input-2 {
+	grid-area: i-1;
+}
+.input-3 {
+	grid-area: i-2;
+}
+.input-4 {
+	grid-area: i-3;
+}
+.actions {
+	grid-area: f;
+}

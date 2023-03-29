@@ -1,0 +1,22 @@
+.notification {
+	display: flex;
+	gap: 0.4rem;
+}
+.notification-detail {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+.notification-msg {
+	font-size: 12px;
+}
+
+.notification-date {
+	display: flex;
+	width: 100%;
+	justify-content: space-between;
+	span {
+		font-size: 10px;
+		font-weight: 900;
+	}
+}
